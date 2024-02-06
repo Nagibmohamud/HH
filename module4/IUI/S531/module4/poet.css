@@ -1,0 +1,37 @@
+body {
+    max-width: 60em;
+    margin: 0 auto 0 auto;
+    }
+    
+    table, th, td {
+    border-collapse: collapse;
+    border: 1px solid #000;
+    padding: 1em;
+    }
+    body {
+        background-image: url("eye.png"); /* these are the eyes in the background*/
+        background-color: rgb(102, 138, 169);
+    }
+    p {
+    
+       color: rgb(196, 188, 227);
+       background-color: #000;  /*this is the color behind the text*/
+       font-size: larger;
+    }
+    h2{
+        background-color: bisque;
+    }
+    
+    li{
+
+    background-color: rgb(122, 122, 168);
+    }
+   
+    table{
+        background-color: rgb(157, 127, 186);
+    }
+
+    h1 {
+
+        background-color: rgb(108, 78, 135);
+    }
