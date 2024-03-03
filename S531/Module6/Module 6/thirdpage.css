@@ -1,0 +1,105 @@
+        img		{ 
+			max-width: 100%;
+			float: left; /* YOU CAN FLOAT AN ELEMENT WITHIN A GRID AREA */
+		}
+		
+		body {
+            background-color: rgb(126, 108, 85);
+        }
+		header {
+            grid-area: header;
+            background-color: rgb(126, 108, 85);
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: rgb(126, 108, 86);
+        }
+        
+
+        main {
+            grid-area: main;
+            background-color: #a38e6d;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: rgb(175, 151, 127);
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: rgb(148, 146, 109);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header aside'
+                'nav nav main main main aside'
+                'nav nav main main main aside'
+                'nav nav main main main aside'
+				'footer footer footer footer footer footer';
+            grid-gap: .5em;
+            padding: .5em;
+			
+			max-width: 62em; /* GIVE CONTAINER A WIDTH AND MARGINS IF YOU DO NOT WANT FULL SCREEN */
+			margin: auto;
+        }
+
+
+        ul li {
+            list-style-type: none;
+        }
+
+
+        /*FIRST BREAK POINT === tablet */
+        @media only screen and (max-width : 900px) {
+         
+            body{
+                background-color: rgb(136, 117, 92);;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                                        'header header header header header header'
+					'nav nav nav nav nav nav'
+                    'main main main main aside aside'
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+                padding: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+        }
+
+        /*SECOND BREAK POINT === mobile */
+        @media only screen and (max-width : 600px) {
+
+            body{
+                background-color: rgb(102, 87, 66);;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main main main'
+                    'aside aside aside aside aside aside'
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+                padding: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+			
+			img {
+				display: none; /* AND YOU CAN MAKE THINGS DISAPPEAR WHEN NOT NEEDED */
+			}
+
+        }
